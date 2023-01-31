@@ -7,7 +7,10 @@ const displayArea = document.getElementById("test1");
 
 weatherForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  fetch(`http://localhost:3000/weather?address=${searchField.value}`)
+  // fetch(`http://localhost:3000/weather?address=${searchField.value}`)
+  fetch(
+    `https://sensetech-weather.onrender.com/weather?address=${searchField.value}`
+  )
     .then((response) => {
       return response.json();
     })
