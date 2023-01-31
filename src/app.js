@@ -6,6 +6,7 @@ import * as geo from "./utils/geocode.js";
 import * as weather from "./utils/weather.js";
 
 const app = express();
+const port = process.env.PORT || 3001;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -70,6 +71,6 @@ app.get("*", (req, res) => {
   res.render("error", { title: "Error", msg: "404 error. Page not found" });
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("Server is up in port 3000");
 });
