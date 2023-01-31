@@ -1,3 +1,5 @@
+import fetch from "node-fetch";
+
 function forecast(lat, long, callback) {
   const url = `http://api.weatherstack.com/current?access_key=c279f533edd6461e678fe1894611f921&query=${lat},${long}`;
   fetch(url)
