@@ -1,3 +1,6 @@
+/* 
+I added this comment to see if it goes automatically to gitHub
+*/
 const weatherForm = document.querySelector("form");
 const searchField = document.querySelector("input");
 const displayArea = document.getElementById("test1");
