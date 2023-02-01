@@ -14,8 +14,6 @@ const localPublic = path.join(__dirname, "../public");
 const localViews = path.join(__dirname, "../templates/views");
 const localPartials = path.join(__dirname, "../templates/partials");
 
-console.log(localPartials);
-
 app.set("view engine", "hbs");
 app.set("views", localViews);
 hbs.registerPartials(localPartials);
