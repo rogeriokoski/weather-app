@@ -49,7 +49,7 @@ app.get("/weather", (req, res) => {
           res.send({ error });
         } else {
           res.send({
-            forecast: `The weather is ${weatherData.description}. The temperature is ${weatherData.temperature}. Chance of rain ${weatherData.precipChance}%`,
+            forecast: `The weather is ${weatherData.description}. The temperature is ${weatherData.temperature}. Current volume of rain is ${weatherData.precipChance} cm. The humidity is ${weatherData.humidity}%`,
             location: location,
             address: req.query.address,
             name: "Carlos RK ",

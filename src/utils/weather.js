@@ -12,7 +12,8 @@ function forecast(lat, long, callback) {
         // throw new Error("Location not found. Try a different search");
       } else {
         const { name, country } = data.location;
-        const { weather_descriptions, temperature, precip } = data.current;
+        const { weather_descriptions, temperature, precip, humidity } = data.current;
+        console.log(data);
         callback(
           undefined,
           {
@@ -21,6 +22,7 @@ function forecast(lat, long, callback) {
             description: weather_descriptions[0],
             temperature: temperature,
             precipChance: precip,
+            humidity: humidity
           }
           // `In ${name} the weather is ${weather_descriptions[0]}, with ${temperature} Celsius and a ${precip}% chance of rain`
         );

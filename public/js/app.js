@@ -14,7 +14,7 @@ weatherForm.addEventListener("submit", (e) => {
     })
     .then((data) => {
       if (data.error) {
-        displayArea.innerHTML = `<p>Error: ${data.error}</p><p>  </p>`;
+        displayArea.innerHTML = `<p>Error: ${data.error}</p><p>!!!</p>`;
       } else {
         displayArea.innerHTML = `<p>Forecast for: ${data.location}</p><p>${data.forecast}</p>`;
       }
