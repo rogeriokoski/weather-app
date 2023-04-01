@@ -3,7 +3,7 @@ import fetch from "node-fetch";
 function geoCode(location, callback) {
   // const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${location}.json?access_token=pk.eyJ1IjoiY2FybG9zcmsiLCJhIjoiY2xjYW5rd2N6M2p4NzN3cDkzaGI1YWYwZiJ9.i97xocybjKcOhzo4SaGqmw`;
   const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${location}.json?access_token=${process.env.MB_API_KEY}`;
-  console.log(url);
+  // console.log('URL for mapbox: ',url);
   fetch(url)
     .then((response) => {
       return response.json();

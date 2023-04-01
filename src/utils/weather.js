@@ -3,7 +3,7 @@ import fetch from "node-fetch";
 function forecast(lat, long, callback) {
   // const url = `http://api.weatherstack.com/current?access_key=c279f533edd6461e678fe1894611f921&query=${lat},${long}`;
   const url = `http://api.weatherstack.com/current?access_key=${process.env.WS_API_KEY}&query=${lat},${long}`;
-  console.log("URL for weatherstack: ", url);
+  // console.log("URL for weatherstack: ", url);
   fetch(url)
     .then((response) => {
       return response.json();
@@ -16,7 +16,7 @@ function forecast(lat, long, callback) {
         const { name, country } = data.location;
         const { weather_descriptions, temperature, precip, humidity } =
           data.current;
-        console.log(data);
+        // console.log(data);
         callback(
           undefined,
           {
